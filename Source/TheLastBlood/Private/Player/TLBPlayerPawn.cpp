@@ -38,5 +38,25 @@ void ATLBPlayerPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+	/** Bind movement */
+	PlayerInputComponent->BindAxis("MoveForward", this, &ATLBPlayerPawn::MoveForward);
+	PlayerInputComponent->BindAxis("MoveSide", this, &ATLBPlayerPawn::MoveSide);
+	
+}
+
+void ATLBPlayerPawn::MoveForward(float Value)
+{
+	if(Value)
+	{
+		AddMovementInput(GetActorForwardVector(), Value);
+	}
+}
+
+void ATLBPlayerPawn::MoveSide(float Value)
+{
+	if(Value)
+	{
+		AddMovementInput(GetActorRightVector(), Value);
+	}
 }
 
