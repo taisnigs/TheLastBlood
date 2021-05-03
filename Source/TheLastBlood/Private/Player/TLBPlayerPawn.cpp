@@ -41,6 +41,12 @@ void ATLBPlayerPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	/** Bind movement */
 	PlayerInputComponent->BindAxis("MoveForward", this, &ATLBPlayerPawn::MoveForward);
 	PlayerInputComponent->BindAxis("MoveSide", this, &ATLBPlayerPawn::MoveSide);
+
+	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ATLBPlayerPawn::Jump);
+	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ATLBPlayerPawn::StopJumping);
+	
+	PlayerInputComponent->BindAction("Duck", IE_Pressed, this, &ATLBPlayerPawn::Duck);
+	PlayerInputComponent->BindAction("Duck", IE_Released, this, &ATLBPlayerPawn::UnDuck);
 	
 }
 
@@ -58,5 +64,16 @@ void ATLBPlayerPawn::MoveSide(float Value)
 	{
 		AddMovementInput(GetActorRightVector(), Value);
 	}
+}
+
+// Later, i will implement some advanced logic here. - jffrey
+void ATLBPlayerPawn::Duck()
+{
+	Crouch();
+}
+
+void ATLBPlayerPawn::UnDuck()
+{
+	UnCrouch();
 }
 

@@ -33,5 +33,8 @@ public:
 	/** Regular movement functions */
 	virtual void MoveForward(float Value);
 	virtual void MoveSide(float Value);
+
+	virtual void Duck();
+	virtual void UnDuck();
 	
 };
