@@ -1,4 +1,4 @@
-# The Last Blood
+# Welcome to The Last Blood.
  
 The Last Blood is an open-source multiplayer shooter written in C++ using Unreal Engine 4.
 
