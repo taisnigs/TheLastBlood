@@ -1,0 +1,13 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{A3313EAD-4E44-60C1-7AC0-AEB465077548}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "TheLastBlood",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
