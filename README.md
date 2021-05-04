@@ -9,3 +9,5 @@ Our main goal is to make a game with all features that was intended to be in a o
 # FAQ
 
 Come back later, there's nothing at this moment!
+
+some forked readme
